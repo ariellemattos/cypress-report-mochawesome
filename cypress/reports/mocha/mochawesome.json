@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-13T20:26:20.992Z",
+    "end": "2020-04-13T20:26:37.110Z",
+    "duration": 16118,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "50b8a0c6-5a8f-46bc-9ec5-8610c4e4ef75",
+      "title": "",
+      "fullFile": "cypress/integration/login_steps.js",
+      "file": "cypress/integration/login_steps.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1dbcb8b-6f17-4625-86e6-dbae638becf0",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login sucesso",
+              "fullTitle": "Login Login sucesso",
+              "timedOut": null,
+              "duration": 4235,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type('ariellemattos');\ncy.get('#password').type('101010');\ncy.get('.btn-login').click();\ncy.get('.welcome > strong').contains('Bem vindo, Arielle');",
+              "err": {},
+              "uuid": "8a43abe8-534b-47af-a678-6c799f86bd9a",
+              "parentUUID": "d1dbcb8b-6f17-4625-86e6-dbae638becf0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com usuario incorreto",
+              "fullTitle": "Login Login com usuario incorreto",
+              "timedOut": null,
+              "duration": 963,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type('arielle');\ncy.get('#password').type('101010');\ncy.get('.btn-login').click();\ncy.get('.swal-modal').contains('Incorrect email or password!');",
+              "err": {},
+              "uuid": "bd17ffa0-dbb1-4d60-abaf-c7c0988ae290",
+              "parentUUID": "d1dbcb8b-6f17-4625-86e6-dbae638becf0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha incorreto",
+              "fullTitle": "Login Login com senha incorreto",
+              "timedOut": null,
+              "duration": 896,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type('ariellemattos');\ncy.get('#password').type('111');\ncy.get('.btn-login').click();\ncy.get('.swal-modal').contains('Incorrect email or password!');",
+              "err": {},
+              "uuid": "ca092873-b431-43ac-95ad-a06098dbd85b",
+              "parentUUID": "d1dbcb8b-6f17-4625-86e6-dbae638becf0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login usando command",
+              "fullTitle": "Login Login usando command",
+              "timedOut": null,
+              "duration": 1313,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('arielle.mattos', 'qaxperience@2020');\ncy.assertLogin('Bem vindo, Arielle');",
+              "err": {},
+              "uuid": "8e4d47dd-008f-42cb-803a-653ec715f505",
+              "parentUUID": "d1dbcb8b-6f17-4625-86e6-dbae638becf0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8a43abe8-534b-47af-a678-6c799f86bd9a",
+            "bd17ffa0-dbb1-4d60-abaf-c7c0988ae290",
+            "ca092873-b431-43ac-95ad-a06098dbd85b",
+            "8e4d47dd-008f-42cb-803a-653ec715f505"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7407,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
